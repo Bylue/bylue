@@ -1,0 +1,2340 @@
+/* Colors */
+
+.secondImage {
+  max-width: 350px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+*::selection {
+  color: #ffffff;
+}
+html {
+  scroll-behavior: smooth;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgb(250, 250, 250);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset 2px -2px -2px rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset 2px -2px -2px #13d14c;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #363636;
+  margin: 0 0 10px 0;
+}
+body{
+  background: #363636;
+}
+h1 {
+  font-size: 87px;
+  font-family: 'Heroes Legend', 'sans-serif';
+  line-height: 140px;
+}
+h2 {
+  font-size: 60px;
+  font-weight: 700;
+}
+h4{
+  color:#F5F5F5
+}
+h2.heroes {
+  font-family: 'Heroes Legend', 'sans-serif';
+}
+.linksCONTACT a{
+  color:rgb(190, 190, 190);
+}
+.linksCONTACT a:hover{
+  color:white;
+  text-decoration: underline;
+}
+h3 {
+  font-size: 28px;
+  line-height: 20px;
+  padding-top: 2px;
+}
+h4 {
+  font-family: 'Poppins', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h4.with-breadcrump::after {
+  display: block;
+  content: '';
+  width: 40px;
+  height: 3px;
+  border-radius: 100px;
+  background: #363636;
+  margin: 20px 0 10px 0;
+}
+h4.with-breadcrump.center::after {
+  margin: 20px auto 10px auto;
+}
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+/* Buttons */
+.btn {
+  padding: 13px 18px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn.small {
+  font-size: 13px;
+  padding: 10px 15px;
+}
+.btn.white {
+  border-color: white;
+  color:white;
+}
+.btn.white:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btn.white::after {
+  background: url("https://bausucht.net/assets/images/arrow-right_black.svg") no-repeat center, white;
+  background-size: 8px;
+  color:white;
+}
+.btn.black {
+  color:white;
+}
+.btn.black::after {
+  background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+  background-size: 8px;
+}
+.btn.black:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.btn::after {
+  display: block;
+  position: absolute;
+  right: -30px;
+  width: 30px;
+  height: calc(100% + 4px);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  content: '';
+  top: -2px;
+}
+/* Text */
+p {
+  font-size: 14px;
+  line-height: 30px;
+  opacity: 0.8;
+  color: #363636;
+}
+p.small {
+  font-size: 12px;
+}
+/* Container */
+.container {
+  margin: 130px auto;
+  width: 1280px;
+}
+/* Centered Head */
+.centered-head {
+  width: 768px;
+  margin: auto;
+  text-align: center;
+}
+.centered-head.with-margin {
+  margin-bottom: 40px;
+}
+/* Grid */
+.grid .row {
+  display: grid;
+  margin: 0 -20px;
+}
+.grid .row.col-14 {
+  grid-template-columns: repeat(7, 14.28571428%);
+}
+.grid .row.col-20 {
+  grid-template-columns: repeat(5, 20%);
+}
+.grid .row.col-25 {
+  grid-template-columns: repeat(4, 25%);
+}
+.grid .row.col-33 {
+  grid-template-columns: repeat(3, 33.33333333%);
+}
+.grid .row.col-50 {
+  grid-template-columns: repeat(2, 50%);
+}
+.grid .row.col-25_75 {
+  grid-template-columns: 25% 75%;
+}
+.grid .row .column {
+  margin: 0 20px;
+}
+.grid .row.autoflow {
+  grid-auto-flow: column;
+  width: auto;
+  overflow: hidden;
+  padding: 50px 0;
+  display: grid !important;
+}
+.grid .row.autoflow.col-20 {
+  grid-template-columns: repeat(1000, 20%);
+}
+.grid .row.autoflow.col-25 {
+  grid-template-columns: repeat(1000, 25%);
+}
+.grid .row.autoflow.col-33 {
+  grid-template-columns: repeat(1000, 33.33333333%);
+}
+.grid .row.autoflow.col-50 {
+  grid-template-columns: repeat(1000, 50%);
+}
+/* Badge */
+.badge {
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 2px solid;
+  background-color: transparent;
+}
+.badge.red {
+  color: #D94A38;
+  box-shadow: 0 0 15px rgba(217, 74, 56, 0.1) inset;
+}
+.badge.turqoise {
+  color: #28B4A4;
+  box-shadow: 0 0 15px rgba(40, 180, 164, 0.1) inset;
+}
+.badge.black {
+  color: #363636;
+  box-shadow: 0 0 15px rgba(54, 54, 54, 0.1) inset;
+}
+/* Modal */
+.modal {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.3s;
+}
+.modal.visible {
+  opacity: 1;
+  z-index: 10;
+}
+.modal.visible .modal-content {
+  opacity: 1;
+}
+.modal .modal-content {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 15px;
+  padding: 32px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.modal .modal-content.small {
+  width: 360px;
+}
+.modal .modal-content .modal-toggler {
+  float: right;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.modal .modal-content .modal-toggler span {
+  height: 2px;
+  width: 14px;
+  display: block;
+  background: #363636;
+}
+.modal .modal-content .modal-toggler span:first-of-type {
+  transform: rotate(45deg);
+  position: relative;
+  top: 2px;
+}
+.modal .modal-content .modal-toggler span:last-of-type {
+  transform: rotate(-45deg);
+}
+/* Form */
+input,
+select {
+  border: 0;
+  border-bottom: 2px #ddd solid;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 14px;
+  transition: 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 19px;
+  outline: none;
+}
+input[type=search]::-webkit-search-cancel-button,
+select[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+input[type=checkbox],
+select[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked + label.checkbox::before,
+select[type=checkbox]:checked + label.checkbox::before {
+  background: #363636;
+}
+input[type=checkbox]:checked + label.checkbox::after,
+select[type=checkbox]:checked + label.checkbox::after {
+  opacity: 1;
+}
+input:focus,
+select:focus {
+  border-bottom-color: #363636;
+}
+input:valid,
+select:valid {
+  border-bottom-color: #5bd664;
+}
+input:required:invalid,
+select:required:invalid {
+  box-shadow: none;
+}
+button {
+  background: none;
+}
+label {
+  font-size: 14px;
+  color: #363636;
+  cursor: pointer;
+  position: relative;
+}
+label.checkbox {
+  padding-left: 21px;
+}
+label.checkbox::before {
+  height: 11px;
+  width: 11px;
+  border: 2px #363636 solid;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-radius: 3px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+label.checkbox::after {
+  position: absolute;
+  top: 8px;
+  background: url("https://bausucht.net/assets/images/check.svg") no-repeat center;
+  background-size: cover;
+  left: 4px;
+  display: block;
+  content: '';
+  height: 6px;
+  width: 7px;
+  transition: 0.3s;
+  opacity: 0;
+}
+/* Table */
+.dataTables_wrapper {
+  text-align: center;
+}
+.dataTables_wrapper .dataTables_length label select {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background: white;
+  border: none;
+  color: #363636;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+}
+.dataTables_wrapper .dataTables_filter {
+  text-align: left;
+  position: relative;
+  width: 360px;
+  margin: 0 auto 70px auto;
+}
+.dataTables_wrapper .dataTables_info {
+  color: #363636;
+  opacity: 0.4;
+  font-size: 14px;
+  float: left;
+  margin-top: 22px;
+}
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  margin-top: 22px;
+}
+.dataTables_wrapper .dataTables_paginate span {
+  margin: 0 13px;
+}
+.dataTables_wrapper .dataTables_paginate span a {
+  font-size: 17px;
+  color: #363636;
+  opacity: 0.5;
+  display: inline-block;
+  height: 25px;
+  width: 27px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 23px;
+  transition: 0.3s;
+}
+.dataTables_wrapper .dataTables_paginate span a:hover {
+  background: #ddd;
+}
+.dataTables_wrapper .dataTables_paginate span a.current {
+  opacity: 1;
+  background: #363636;
+  color: white;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+  /*
+      &.previous {
+        &::before {
+          top: 49%;
+          transform: translateY(-50%);
+          height: 12px;
+          width: 10px;
+          display: inline-block;
+          position: absolute;
+          left: -17px;
+          content: '';
+          background: url("https://bausucht.net/assets/images/arrow_left.svg") no-repeat center;
+          background-size: cover;
+        }
+      }
+
+      &.next {
+        &::after {
+          top: 49%;
+          transform: translateY(-50%);
+          height: 12px;
+          width: 10px;
+          display: inline-block;
+          position: absolute;
+          right: -17px;
+          content: '';
+          background: url("https://bausucht.net/assets/images/arrow-right_black.svg") no-repeat center;
+          background-size: cover;
+        }
+      }
+       */
+}
+.dataTables_wrapper table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+.dataTables_wrapper table tbody tr:nth-child(odd) td,
+.dataTables_wrapper table thead tr:nth-child(odd) td {
+  background: rgba(0, 0, 0, 0.03);
+}
+.dataTables_wrapper table tbody tr td,
+.dataTables_wrapper table thead tr td,
+.dataTables_wrapper table tbody tr th,
+.dataTables_wrapper table thead tr th {
+  padding: 20px 25px;
+  color: #363636;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+}
+.dataTables_wrapper table tbody tr td a,
+.dataTables_wrapper table thead tr td a,
+.dataTables_wrapper table tbody tr th a,
+.dataTables_wrapper table thead tr th a {
+  color: #363636;
+}
+.dataTables_wrapper table tbody tr td img,
+.dataTables_wrapper table thead tr td img,
+.dataTables_wrapper table tbody tr th img,
+.dataTables_wrapper table thead tr th img {
+  width: 28px;
+}
+.dataTables_wrapper table tbody tr td:last-of-type,
+.dataTables_wrapper table thead tr td:last-of-type,
+.dataTables_wrapper table tbody tr th:last-of-type,
+.dataTables_wrapper table thead tr th:last-of-type {
+  text-align: right;
+}
+.dataTables_wrapper table tbody tr th:first-of-type,
+.dataTables_wrapper table thead tr th:first-of-type {
+  border-top-left-radius: 8px;
+}
+.dataTables_wrapper table tbody tr th:last-of-type,
+.dataTables_wrapper table thead tr th:last-of-type {
+  border-top-right-radius: 8px;
+}
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-300.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-500.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url('https://bausucht.net/assets/fonts/poppins-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/poppins-v8-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* heroes legend */
+@font-face {
+  font-family: 'Heroes Legend';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Heroes Legend'), local('Heroes Legend'), url('https://bausucht.net/assets/fonts/heroes-legend.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/heroes-legend.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'sans-serif';
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
+}
+#nav-toggler {
+  width: 26px;
+  height: 26px;
+  direction: rtl;
+  position: fixed;
+  top: 35px;
+  right: 35px;
+  z-index: 10;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+#nav-toggler span {
+  width: 100%;
+  height: 3px;
+  border-radius: 100px;
+  background: white;
+  display: block;
+  margin-bottom: 8px;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+#nav-toggler span:first-of-type {
+  width: 80%;
+}
+#nav-toggler span:last-of-type {
+  width: 60%;
+}
+#nav-toggler span:last-of-type {
+  margin-bottom: 0;
+}
+#nav-toggler.opened span {
+  display: none;
+  background: #262626;
+  width: 100%;
+}
+#nav-toggler.opened span:last-of-type {
+  display: block;
+  transform: rotate(-45deg);
+}
+#nav-toggler.opened span:first-of-type {
+  display: block;
+  transform: rotate(45deg);
+  top: 11px;
+  position: relative;
+}
+#nav-toggler.fixed {
+  background: #262626;
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+#nav-toggler.fixed span {
+  background: white;
+}
+nav#nav-main {
+  width: 100%;
+  position: fixed;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 5;
+}
+nav#nav-main ul {
+  width: 1255px;
+  margin: auto;
+  padding: 70px 0 55px;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul #dropdown {
+  display: inline-block;
+  position: relative;
+}
+nav#nav-main ul #dropdown:hover li {
+  padding-bottom: 25px;
+}
+nav#nav-main ul #dropdown:hover #dropdown-menu {
+  opacity: 1;
+  z-index: 2;
+}
+nav#nav-main ul #dropdown #dropdown-menu {
+  position: absolute;
+  background: #262626;
+  border-radius: 5px;
+  opacity: 0;
+  right: 0;
+  top: 30px;
+  z-index: -1;
+  width: 170px;
+  text-align: left;
+  border: 2px #262626 solid;
+}
+nav#nav-main ul #dropdown #dropdown-menu li {
+  padding: 10px !important;
+  margin: 0;
+}
+nav#nav-main ul #dropdown #dropdown-menu li a {
+  color: #262626;
+}
+nav#nav-main ul #dropdown #dropdown-menu img {
+  filter: none;
+  width: 22px;
+}
+nav#nav-main ul li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:white;
+}
+nav#nav-main ul li:hover {
+  opacity: 1;
+}
+nav#nav-main ul li#vertical-line {
+  width: 2px;
+  height: 15px;
+  background: white;
+  opacity: 0.5;
+  vertical-align: middle;
+}
+nav#nav-main ul li#signout img {
+  margin: 0 0 0 10px;
+}
+nav#nav-main ul li#link-active {
+  opacity: 1;
+}
+nav#nav-main ul li#signin-as {
+  position: relative;
+}
+nav#nav-main ul li#signin-as::after {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #262626;
+  transform: rotate(45deg);
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -22px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul li img {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+  opacity: 0.6;
+  position: relative;
+  top: -1px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul li a {
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+  text-decoration: none;
+  font-size: 14px;
+}
+nav#nav-main h3 {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:#262626;
+}
+nav#nav-main #right-btn {
+  position: absolute;
+  top: 55px;
+  right: 70px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:white;
+}
+nav#nav-main #right-btn::after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:#262626;
+}
+footer {
+  overflow-y: auto;
+  background: url("./footer.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+}
+footer a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #262626;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+}
+footer a:hover {
+  opacity: 0.7;
+}
+footer .container {
+  margin: 90px auto;
+}
+footer #footer-copyright {
+  background: #363636;
+  padding: 18px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+header h1,
+header h2.heroes {
+  color: white;
+  text-shadow: 0 0 55px rgba(255, 255, 255, 0.5);
+}
+header#header-main {
+  background: url("./background.png") no-repeat center bottom;
+  background-size: cover;
+  overflow-y: auto;
+}
+header#header-main #header-content {
+  width: 960px;
+  margin: 180px auto 150px auto;
+  text-align: center;
+}
+header#header-main #header-content.large {
+  margin: 180px auto 360px auto;
+}
+header#header-main #header-content h1 {
+  color: white;
+  text-shadow: 0 0 55px rgba(255, 255, 255, 0.5);
+}
+header#header-main #header-content h5 {
+  color: white;
+}
+header#header-main #header-content #content-scroller {
+  display: block;
+  margin-top: 100px;
+  text-decoration: none;
+}
+header#header-main #header-content #content-scroller p {
+  color: white;
+}
+header#header-small {
+  background: url("https://bausucht.net/assets/images/header-small.png") no-repeat center bottom;
+  background-size: cover;
+  overflow-y: auto;
+  text-align: center;
+}
+header#header-small #header-content {
+  width: 1280px;
+  margin: 180px auto 100px auto;
+}
+header#header-small #header-content.large {
+  margin: 160px auto 195px auto;
+}
+header#header-small #header-content h5 {
+  color: white;
+}
+header#header-small #header-content #content-scroller {
+  display: block;
+  margin-top: 100px;
+  text-decoration: none;
+}
+header#header-small #header-content #content-scroller p {
+  color: white;
+}
+#team {
+  background: #F5F5F5;
+  overflow: auto;
+}
+#team .grid {
+  position: relative;
+}
+#team .slide-control {
+  height: 30px;
+  opacity: 0.3;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#team .slide-control#scroll-left {
+  left: -100px;
+}
+#team .slide-control#scroll-right {
+  right: -100px;
+}
+#team .slide-control:hover {
+  opacity: 0.6;
+}
+#team .row {
+  margin: 0 -35px;
+}
+#team .row .column {
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  background: white;
+  border: 1px #eaeaea solid;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.03);
+  padding: 45px;
+  margin: 0 35px;
+}
+#team .row .column img {
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  border: 1px #E0E0E0 solid;
+  margin: 0 auto -50px auto;
+  display: block;
+  position: relative;
+  top: -80px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.11);
+}
+#statistics .column {
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 45px;
+  border: 1px solid transparent;
+}
+#statistics .column:hover {
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  background: white;
+  border-color: #eaeaea;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.03);
+  margin: 0 35px;
+}
+#statistics .column h5 {
+  font-weight: bold;
+}
+#statistics .column img {
+  height: 65px;
+  width: auto;
+  margin-bottom: 15px;
+}
+#statistics .column h2 {
+  font-size: 50px;
+}
+#statistics .column h2 small {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 5px;
+}
+#accounts .container {
+  margin: 85px auto;
+}
+#accounts .column {
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 45px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  min-height: 300px;
+}
+#accounts .column.add-account {
+  border: 2px #363636 dashed;
+  border-radius: 15px;
+  padding: 0;
+  box-shadow: none !important;
+  position: relative;
+}
+#accounts .column.add-account span {
+  font-size: 70px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: lighter;
+  opacity: 0.5;
+}
+#accounts .column:hover {
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  background: white;
+  border-color: #eaeaea;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.03);
+  margin: 0 35px;
+}
+#accounts .column:hover .account-information {
+  max-height: 1000px;
+}
+#accounts .column .account-information {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+#accounts .column img.skin {
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  border: 1px #E0E0E0 solid;
+  margin: 0 auto 25px auto;
+  display: block;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.11);
+}
+#accounts .column h5 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#accounts .column h5 img {
+  width: 23px;
+  vertical-align: middle;
+  top: -2px;
+  position: relative;
+  margin-right: 8px;
+}
+#accounts .column table {
+  color: #363636;
+  margin: 0 auto 25px auto;
+  text-align: left;
+}
+#accounts .column table td:first-of-type {
+  opacity: 0.8;
+}
+#accounts .column table td {
+  font-size: 14px;
+  vertical-align: top;
+}
+#login_site h2 {
+  line-height: 40px;
+}
+#login_site form {
+  margin: auto;
+  width: 360px;
+}
+#clans-overview {
+  position: relative;
+  top: -170px;
+  z-index: 2;
+}
+#clans-overview .container {
+  margin: 0 auto;
+}
+#clans-overview .container table {
+  border: 1px #eaeaea solid;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background: white;
+}
+#clans-overview .container table tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 8px;
+}
+#clans-overview .container table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 8px;
+}
+#clans-overview .dataTables_length,
+#clans-overview .dataTables_filter {
+  display: inline-block;
+  margin: 0 10px;
+}
+#clans-overview .dataTables_length input,
+#clans-overview .dataTables_filter input {
+  background: none;
+  border-bottom-color: white;
+  display: inline-block;
+  color: white;
+}
+#clans-overview .dataTables_length label,
+#clans-overview .dataTables_filter label {
+  color: white;
+}
+#clans-overview .dataTables_length {
+  display: none;
+}
+#clans-overview .dataTables_length label select {
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background: white;
+  border: none;
+  color: #363636;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+}
+#clans-overview .dataTables_filter {
+  text-align: left;
+  position: relative;
+  width: 360px;
+  margin: 0 auto 70px auto;
+}
+#clan-info {
+  position: relative;
+  top: -40px;
+  z-index: 2;
+}
+#clan-info .container {
+  border: 1px #eaeaea solid;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background: white;
+  padding: 45px 45px 30px 45px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+#clan-info .container .centered-head#main {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+}
+#clan-info .container .centered-head#main .grid .row {
+  margin: 0;
+}
+#clan-info .container .centered-head#main .grid .row .column {
+  margin: 0;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#clan-info .container .centered-head#main .grid .row .column.active {
+  opacity: 1;
+  cursor: default;
+}
+#clan-info .container .centered-head#main .grid .row .column img {
+  height: 35px;
+  filter: brightness(15);
+}
+#clan-info .container .centered-head#main .grid .row .column p {
+  margin: 0;
+  color: white;
+}
+#clan-info .container .container-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  opacity: 0;
+}
+#clan-info .container .container-content.visible {
+  max-height: 1000px;
+  opacity: 1;
+  overflow: visible;
+}
+#clan-info .container .container-content .dataTables_wrapper {
+  position: relative;
+  margin-top: 50px;
+  text-align: left;
+}
+#clan-info .container .container-content .dataTables_wrapper table {
+  margin: 0 -45px;
+  width: calc(100% + 90px);
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_filter {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  margin: 0;
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_filter label {
+  display: block;
+  width: 100%;
+  position: relative;
+  content: '';
+  visibility: hidden;
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_filter label::before {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: url("https://bausucht.net/assets/images/magnifier.svg") no-repeat center;
+  background-size: cover;
+  content: '';
+  visibility: visible;
+  opacity: 0.7;
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_filter label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  visibility: visible;
+  padding-left: 25px;
+  opacity: 0.5;
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_filter label input:valid {
+  border-bottom-color: #363636;
+}
+#clan-info .container .container-content .dataTables_wrapper .dataTables_info {
+  float: none;
+  display: inline-block;
+  margin-top: 27px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid {
+  margin-top: 40px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row {
+  margin-bottom: -35px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row .column {
+  text-align: center;
+  margin-bottom: 35px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row .column h5 {
+  font-weight: bold;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row .column img {
+  height: 65px;
+  width: auto;
+  margin-bottom: 15px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row .column h2 {
+  font-size: 50px;
+}
+#clan-info .container .container-content[trigger|="statistics"] .grid .row .column h2 small {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 5px;
+}
+#clan-info .container .container-content[trigger|="players"] img {
+  border-radius: 3px;
+}
+#clan-info .container .container-content[trigger|="history"] table td:first-of-type,
+#clan-info .container .container-content[trigger|="players"] table td:first-of-type {
+  width: 1%;
+  white-space: nowrap;
+  padding-right: 0;
+  text-align: center;
+}
+#bauwert-overview,
+#bauwert-product {
+  position: relative;
+  top: -240px;
+  z-index: 2;
+}
+#bauwert-overview .container .grid .row .column .wrapper,
+#bauwert-product .container .grid .row .column .wrapper {
+  border: 1px #eaeaea solid;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background: white;
+  padding: 40px;
+}
+#bauwert-overview .container .grid .row .column .wrapper a,
+#bauwert-product .container .grid .row .column .wrapper a {
+  text-decoration: none;
+  margin-bottom: 35px;
+}
+#bauwert-overview .container .grid .row .column .wrapper a:nth-last-child(-n+4),
+#bauwert-product .container .grid .row .column .wrapper a:nth-last-child(-n+4) {
+  margin-bottom: 0;
+}
+#bauwert-overview .container .grid .row .column .wrapper a .column,
+#bauwert-product .container .grid .row .column .wrapper a .column {
+  text-align: center;
+}
+#bauwert-overview .container .grid .row .column .wrapper a .column:hover img,
+#bauwert-product .container .grid .row .column .wrapper a .column:hover img {
+  padding: 10px;
+}
+#bauwert-overview .container .grid .row .column .wrapper a .column img,
+#bauwert-product .container .grid .row .column .wrapper a .column img {
+  height: 110px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+#bauwert-overview .container .grid .row .column .wrapper a .column p,
+#bauwert-product .container .grid .row .column .wrapper a .column p,
+#bauwert-overview .container .grid .row .column .wrapper a .column h5,
+#bauwert-product .container .grid .row .column .wrapper a .column h5 {
+  margin: 0;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+#bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+  margin-top: -5px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul {
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul:last-of-type {
+  margin-bottom: 0;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul li,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul li {
+  list-style: none;
+  padding: 5px 0;
+  opacity: 0.6;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul li:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul li:last-of-type {
+  padding-bottom: 0;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul li#point-active,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul li#point-active {
+  opacity: 1;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+#bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+  color: #363636;
+  text-decoration: none;
+}
+#bauwert-overview .container .grid .row .column#bauwert-sidebar #sidebar-toggler,
+#bauwert-product .container .grid .row .column#bauwert-sidebar #sidebar-toggler {
+  display: none;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product_overview,
+#bauwert-product .container .grid .row .column#bauwert-product_overview {
+  position: relative;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search,
+#bauwert-product .container .grid .row .column#bauwert-product_overview #products-search {
+  position: absolute;
+  right: 40px;
+  top: 27px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search .row,
+#bauwert-product .container .grid .row .column#bauwert-product_overview #products-search .row {
+  margin: 0 -5px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search .row .column,
+#bauwert-product .container .grid .row .column#bauwert-product_overview #products-search .row .column {
+  margin: 0 5px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search .row .column input,
+#bauwert-product .container .grid .row .column#bauwert-product_overview #products-search .row .column input,
+#bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search .row .column select,
+#bauwert-product .container .grid .row .column#bauwert-product_overview #products-search .row .column select {
+  border-bottom-color: #363636;
+  opacity: 0.5;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product-description #products-search,
+#bauwert-product .container .grid .row .column#bauwert-product-description #products-search {
+  position: absolute;
+  right: 40px;
+  top: 27px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product-description #products-search .row,
+#bauwert-product .container .grid .row .column#bauwert-product-description #products-search .row {
+  margin: 0 -5px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product-description #products-search .row .column,
+#bauwert-product .container .grid .row .column#bauwert-product-description #products-search .row .column {
+  margin: 0 5px;
+}
+#bauwert-overview .container .grid .row .column#bauwert-product-description #products-search .row .column input,
+#bauwert-product .container .grid .row .column#bauwert-product-description #products-search .row .column input,
+#bauwert-overview .container .grid .row .column#bauwert-product-description #products-search .row .column select,
+#bauwert-product .container .grid .row .column#bauwert-product-description #products-search .row .column select {
+  border-bottom-color: #363636;
+  opacity: 0.5;
+}
+
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-image {
+  width: 100%;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination {
+  margin-top: 25px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination .row {
+  margin: 0 -5px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination .row .column {
+  margin: 0 5px;
+  padding: 15px;
+  border-radius: 5px;
+  border: #ddd 1px solid;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination .row .column.active {
+  filter: brightness(0.9);
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination .row .column.active::before {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100px;
+  background: url("https://bausucht.net/assets/images/check.svg") no-repeat center, #363636;
+  background-size: 8px;
+  display: block;
+  content: '';
+  z-index: 2;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-destination .row .column p {
+  margin: 0;
+  line-height: 5px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.active {
+  max-height: 100000px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history .dataTables_wrapper {
+  overflow: auto;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table {
+  border: 1px #eaeaea solid;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr:last-of-type td:first-of-type,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 8px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr:last-of-type td:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 8px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr td,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr td,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr th,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr th {
+  padding: 10px;
+  font-size: 14px;
+}
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr td:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr td:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table thead tr th:last-of-type,
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column .container-content.product-pricing-history table tbody tr th:last-of-type {
+  text-align: left;
+}
+
+@media only screen and (max-width: 560px) {
+  /* Universal */
+  #nav-toggler {
+    display: block;
+  }
+
+  .secondImage {
+    max-width: 250px;
+  }
+
+  nav#nav-main {
+    background: white;
+    overflow-y: hidden;
+    max-height: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+  }
+  nav#nav-main.visible {
+    max-height: 1000px;
+  }
+  nav#nav-main h3 {
+    text-align: center;
+    margin-right: 22px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-family: 'Heroes Legend', 'sans-serif';
+  }
+  nav#nav-main ul {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav#nav-main ul #dropdown:hover li {
+    padding: 8px 0;
+  }
+  nav#nav-main ul #dropdown:hover #dropdown-menu {
+    max-height: 1000px;
+  }
+  nav#nav-main ul #dropdown #dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    text-align: center;
+    right: unset;
+    top: unset;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav#nav-main ul li {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+  }
+  nav#nav-main ul li a {
+    color: #363636;
+    font-size: 16px;
+  }
+  nav#nav-main #right-btn {
+    position: relative;
+    border-color: #363636;
+    color: #363636;
+    right: unset;
+    top: unset;
+    display: table;
+    margin: 0 auto 35px auto;
+    left: -15px;
+  }
+  nav#nav-main #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+    height: 100%;
+    top: 0;
+  }
+  nav#nav-main #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    width: 85%;
+  }
+  .grid .row {
+    display: block;
+    margin: 0 !important;
+  }
+  .grid .row .column {
+    margin: 0 0 35px 0 !important;
+  }
+  .grid .row.autoflow .column {
+    margin: 0 20px !important;
+  }
+  .grid .row.autoflow.col-33,
+  .grid .row.autoflow.col-50 {
+    grid-template-columns: repeat(1000, 100%);
+  }
+  .centered-head {
+    width: 100%;
+  }
+  h1 {
+    line-height: 170px;
+    margin-bottom: -30px;
+    font-size: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 99%;
+    white-space: nowrap;
+  }
+  h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 99%;
+    white-space: nowrap;
+    font-size: 35px;
+  }
+  h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 99%;
+    white-space: nowrap;
+    line-height: 28px;
+  }
+  header.header-small #header-content {
+    width: 85%;
+    margin: 80px auto 100px auto !important;
+  }
+  .modal .modal-content {
+    width: 90% !important;
+  }
+  /* Home */
+  header#header-main #header-content {
+    width: 85%;
+  }
+  #about p {
+    width: 100% !important;
+  }
+  #team .slide-control#scroll-right {
+    right: -20px;
+  }
+  #team .slide-control#scroll-left {
+    left: -20px;
+  }
+  /* Clan Overview */
+  #clans-overview-header #header-content {
+    margin-bottom: 210px !important;
+  }
+  /* Clan Info */
+  #clan-info-header #header-content {
+    margin-bottom: 250px !important;
+  }
+  #clan-info {
+    top: -20px;
+  }
+  #clan-info .container {
+    margin: 0 auto;
+  }
+  #clan-info .container .container-content.visible {
+    max-height: 10000px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper {
+    max-width: calc(100% + 90px);
+    overflow-x: scroll;
+    margin: 0 -45px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper table {
+    margin: 0;
+    width: 100%;
+  }
+  #clan-info .container .centered-head#main {
+    width: 50%;
+    top: -190px;
+  }
+  #clan-info .container .centered-head#main .grid .row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  /* Bauwert */
+  #bauwert-overview,
+  #bauwert-product {
+    top: -90px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    margin: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul {
+    margin: 0;
+    padding: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul:last-of-type {
+    margin-bottom: 0 !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li {
+    list-style: none;
+    padding: 5px 0;
+    opacity: 0.6;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li#point-active,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li#point-active {
+    opacity: 1;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    color: #363636;
+    text-decoration: none;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    opacity: 1;
+    max-height: 10000px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul {
+    margin: 0 0 25px 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    margin-top: -5px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler {
+    margin-bottom: 20px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar #sidebar-toggler {
+    text-align: center;
+    display: block;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product_overview #products-search,
+  #bauwert-product .container .grid .row .column#bauwert-product_overview #products-search {
+    position: inherit;
+  }
+  #bauwert-overview .container .grid .row .column #product-pricing-history .column,
+  #bauwert-product .container .grid .row .column #product-pricing-history .column {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (min-width: 561px) and (max-width: 768px) {
+  /* Universal */
+  #nav-toggler {
+    display: block;
+  }
+  h1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 99%;
+    white-space: nowrap;
+    font-size: 60px;
+    line-height: 170px;
+    margin-bottom: -30px;
+  }
+  nav#nav-main {
+    background: white;
+    overflow-y: hidden;
+    max-height: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+  }
+  nav#nav-main.visible {
+    max-height: 1000px;
+  }
+  nav#nav-main h3 {
+    text-align: center;
+    margin-right: 22px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-family: 'Heroes Legend', 'sans-serif';
+  }
+  nav#nav-main ul {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav#nav-main ul #dropdown:hover li {
+    padding: 8px 0;
+  }
+  nav#nav-main ul #dropdown:hover #dropdown-menu {
+    max-height: 1000px;
+  }
+  nav#nav-main ul #dropdown #dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    text-align: center;
+    right: unset;
+    top: unset;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav#nav-main ul li {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+  }
+  nav#nav-main ul li a {
+    color: #363636;
+    font-size: 16px;
+  }
+  nav#nav-main #right-btn {
+    position: relative;
+    border-color: #363636;
+    color: #363636;
+    right: unset;
+    top: unset;
+    display: table;
+    margin: 0 auto 35px auto;
+    left: -15px;
+  }
+  nav#nav-main #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+    height: 100%;
+    top: 0;
+  }
+  nav#nav-main #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    width: 85%;
+  }
+  .grid .row {
+    margin: 0 -10px -35px -10px !important;
+    grid-template-columns: 50% 50% !important;
+  }
+  .grid .row .column {
+    margin: 0 10px 35px 10px !important;
+  }
+  .grid .row.autoflow .column {
+    margin: 0 20px !important;
+  }
+  .grid .row.autoflow.col-33,
+  .grid .row.autoflow.col-50 {
+    grid-template-columns: repeat(1000, 50%) !important;
+  }
+  .centered-head {
+    width: 100%;
+  }
+  header.header-small #header-content {
+    width: 85%;
+    margin: 80px auto 100px auto !important;
+  }
+  /* Home */
+  header#header-main #header-content {
+    width: 85%;
+  }
+  #about p {
+    width: 100% !important;
+  }
+  #team .slide-control#scroll-right {
+    right: -40px;
+  }
+  #team .slide-control#scroll-left {
+    left: -40px;
+  }
+  #statistics h2 {
+    font-size: 40px !important;
+  }
+  /* Clan Overview */
+  #clans-overview-header #header-content {
+    margin-bottom: 210px !important;
+  }
+  /* Clan Info */
+  #clan-info-header #header-content {
+    margin-bottom: 250px !important;
+  }
+  #clan-info {
+    top: -20px;
+  }
+  #clan-info .container {
+    margin: 0 auto;
+  }
+  #clan-info .container .container-content.visible {
+    max-height: 10000px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper {
+    max-width: calc(100% + 90px);
+    overflow-x: scroll;
+    margin: 0 -45px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper table {
+    margin: 0;
+    width: 100%;
+  }
+  #clan-info .container .centered-head#main {
+    width: 50%;
+    top: -200px;
+  }
+  #clan-info .container .centered-head#main .grid .row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  /* Bauwert */
+  #bauwert-overview,
+  #bauwert-product {
+    top: -90px;
+  }
+  #bauwert-overview .container .grid .row.col-25_75,
+  #bauwert-product .container .grid .row.col-25_75 {
+    grid-template-columns: 100% !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    margin: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul {
+    margin: 0;
+    padding: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul:last-of-type {
+    margin-bottom: 0 !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li {
+    list-style: none;
+    padding: 5px 0;
+    opacity: 0.6;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li#point-active,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li#point-active {
+    opacity: 1;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    color: #363636;
+    text-decoration: none;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    opacity: 1;
+    max-height: 10000px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul {
+    margin: 0 0 25px 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    margin-top: -5px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler {
+    margin-bottom: 20px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar #sidebar-toggler {
+    text-align: center;
+    display: block;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-image,
+  #bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-image {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-pricing-history .row .column,
+  #bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-pricing-history .row .column {
+    overflow: scroll;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  /* Universal */
+  #nav-toggler {
+    display: block;
+  }
+  nav#nav-main {
+    background: white;
+    overflow-y: hidden;
+    max-height: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+  }
+  nav#nav-main.visible {
+    max-height: 1000px;
+  }
+  nav#nav-main h3 {
+    text-align: center;
+    margin-right: 22px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-family: 'Heroes Legend', 'sans-serif';
+  }
+  nav#nav-main ul {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav#nav-main ul #dropdown:hover li {
+    padding: 8px 0;
+  }
+  nav#nav-main ul #dropdown:hover #dropdown-menu {
+    max-height: 1000px;
+  }
+  nav#nav-main ul #dropdown #dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    text-align: center;
+    right: unset;
+    top: unset;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav#nav-main ul li {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+  }
+  nav#nav-main ul li a {
+    color: white;
+    font-size: 16px;
+  }
+  nav#nav-main #right-btn {
+    position: relative;
+    border-color: white;
+    color: white;
+    right: unset;
+    top: unset;
+    display: table;
+    margin: 0 auto 35px auto;
+    left: -15px;
+  }
+  nav#nav-main #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, white;
+    background-size: 8px;
+    height: 100%;
+    top: 0;
+  }
+  nav#nav-main #right-btn:hover {
+    background: white;
+  }
+  .container {
+    width: 85%;
+  }
+  .grid .row {
+    margin: 0 -10px -35px -10px !important;
+    grid-template-columns: 50% 50% !important;
+  }
+  .grid .row .column {
+    margin: 0 10px 35px 10px !important;
+  }
+  .grid .row.autoflow .column {
+    margin: 0 20px !important;
+  }
+  .grid .row.autoflow.col-33,
+  .grid .row.autoflow.col-50 {
+    grid-template-columns: repeat(1000, 50%) !important;
+  }
+  .centered-head {
+    width: 100%;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 90px;
+  }
+  header.header-small #header-content {
+    width: 85%;
+    margin: 80px auto 100px auto !important;
+  }
+  /* Home */
+  header#header-main #header-content {
+    width: 85%;
+  }
+  #about p {
+    width: 100% !important;
+  }
+  #team .slide-control#scroll-right {
+    right: -40px;
+  }
+  #team .slide-control#scroll-left {
+    left: -40px;
+  }
+  /* Clan Overview */
+  #clans-overview-header #header-content {
+    margin-bottom: 210px !important;
+  }
+  /* Clan Info */
+  #clan-info-header #header-content {
+    margin-bottom: 250px !important;
+  }
+  #clan-info {
+    top: -170px;
+  }
+  #clan-info .container {
+    margin: 0 auto;
+  }
+  #clan-info .container .container-content.visible {
+    max-height: 10000px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper {
+    max-width: calc(100% + 90px);
+    overflow-x: scroll;
+    margin: 0 -45px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper table {
+    margin: 0;
+    width: 100%;
+  }
+  #clan-info .container .centered-head#main {
+    width: 50%;
+    top: -100px;
+  }
+  #clan-info .container .centered-head#main .grid .row {
+    display: grid;
+    grid-template-columns: repeat(4, 25%) !important;
+  }
+  /* Bauwert */
+  #bauwert-overview,
+  #bauwert-product {
+    top: -90px;
+  }
+  #bauwert-overview .container .grid .row.col-25_75,
+  #bauwert-product .container .grid .row.col-25_75 {
+    grid-template-columns: 35% 65% !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    max-width: 99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    display: inline-block;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description #product-pricing-history .row .column,
+  #bauwert-product .container .grid .row .column#bauwert-product-description #product-pricing-history .row .column {
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  #clans-overview .container .dataTables_wrapper {
+    overflow-x: auto;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1366px) {
+  /* Universal */
+  nav#nav-main img {
+    filter: none;
+  }
+  nav#nav-main.fixed {
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+  nav#nav-main.fixed h3 {
+    color: #363636;
+    top: 20px;
+  }
+  nav#nav-main.fixed ul {
+    padding: 30px 0;
+    width: 90%;
+  }
+  nav#nav-main.fixed ul li a {
+    color: #363636;
+  }
+  nav#nav-main.fixed #right-btn {
+    color: #363636;
+    border-color: #363636;
+    top: 15px;
+  }
+  nav#nav-main.fixed #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+  }
+  nav#nav-main.fixed #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  nav#nav-main h3 {
+    color: white;
+    left: 60px;
+    top: 60px;
+    position: absolute;
+  }
+  .container {
+    width: 90%;
+  }
+  #header-content {
+    width: 80% !important;
+  }
+  #team .slide-control#scroll-right {
+    right: -40px;
+  }
+  #team .slide-control#scroll-left {
+    left: -40px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* Components */
+  h1 {
+    max-width: 99%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    padding: 38px;
+    box-sizing: border-box;
+  }
+  /* Universal */
+  nav#nav-main {
+    height: 79px;
+  }
+  nav#nav-main li img {
+    filter: invert(1);
+  }
+  nav#nav-main.fixed {
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+  nav#nav-main.fixed h3 {
+    color: #363636;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav#nav-main.fixed ul {
+    padding: 30px 0;
+  }
+  nav#nav-main.fixed ul li a {
+    color: #363636;
+  }
+  nav#nav-main.fixed ul li img {
+    filter: none;
+  }
+  nav#nav-main.fixed ul li#vertical-line {
+    background: #363636;
+  }
+  nav#nav-main.fixed ul li#signin-as::after {
+    border-top-color: transparent;
+    border-right-color: #363636;
+  }
+  nav#nav-main.fixed #right-btn {
+    color: #363636;
+    border-color: #363636;
+    top: 15px;
+  }
+  nav#nav-main.fixed #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+  }
+  nav#nav-main.fixed #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  nav#nav-main h3 {
+    color: white;
+    left: 60px;
+    position: absolute;
+    top: 68px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header#header-small #header-content {
+    width: 85%;
+    margin: 80px auto 100px auto !important;
+  }
+
+  header#header-small #header-content h2 {
+    line-height: 140px;
+    margin: -20px 0 -50px 0;
+  }
+}
+
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-information h5 {
+  color: #4f9e4f;
+}
+
+/*# sourceMappingURL=all.css.map */
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
+#bauwert-overview .pagination,
+#bauwert-product .pagination {
+  margin-top: 22px;
+}
+#bauwert-overview .pagination span,
+#bauwert-product .pagination span {
+  margin: 0 13px;
+}
+#bauwert-overview .pagination span a,
+#bauwert-product .pagination span a {
+  font-size: 17px;
+  color: #363636;
+  opacity: 0.5;
+  display: inline-block;
+  height: 25px;
+  width: 27px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 23px;
+  transition: 0.3s;
+}
+#bauwert-overview .pagination span a:hover,
+#bauwert-product .pagination span a:hover {
+  background: #ddd;
+}
+#bauwert-overview .pagination span a.current,
+#bauwert-product .pagination span a.current {
+  opacity: 1;
+  background: #363636;
+  color: white;
+}
+#bauwert-overview .pagination .paginate_button,
+#bauwert-product .pagination .paginate_button {
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+}

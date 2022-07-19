@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Bylue
 - 👀 I’m interested in K.I.
-- 🌱 I’m currently learning Python
+- 🌱 I’m currently learning Python/Javascript
 - 💞️ I’m looking to collaborate on https://bylue.org
 - 📫 How to reach me https://bylue.org
 
